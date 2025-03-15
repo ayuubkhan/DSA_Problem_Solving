@@ -28,9 +28,10 @@ public class PalindromeCheck {
         int input1 = 121;
         int temp = input1;
         int reverse = 0;
-        for (; temp != 0; temp = temp / 10) {
+        while (temp != 0) {
             int rem = temp % 10;
             reverse = reverse * 10 + rem;
+            temp = temp / 10;
         }
 
         if (input1 == reverse)
